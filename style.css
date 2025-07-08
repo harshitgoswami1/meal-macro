@@ -1,20 +1,21 @@
-
 body {
   height: 100vh;
   margin: 0;
   display: flex;
-  justify-content: center;  
-  align-items: center;      
-  background-color: rgb(52, 53, 65); 
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(52, 53, 65);
   flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Style the textarea */
 textarea {
-  width: 50vw;        
-  height: 50vh;       
+  width: 80vw;
+  max-width: 600px;
+  height: 40vh;
   font-size: 18px;
-  padding: 0px;
+  padding: 10px;
   border: 2px solid #a19a9a;
   border-radius: 10px;
   resize: none;
@@ -22,47 +23,86 @@ textarea {
   outline: none;
   background-color: rgb(52, 53, 65);
   color: white;
+  box-sizing: border-box;
 }
 
-.inputbar{
-    margin: 20px;
+.inputbar {
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.bar{
-    width: 100%;
-    max-width: 700px;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    border: 60px;
-    gap: 10px;
-    padding: 10px 20px;
-    border-radius: 60px;
-    backdrop-filter: blur(4px) saturate(180%);
+.bar {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 60px;
+  backdrop-filter: blur(4px) saturate(180%);
+  box-sizing: border-box;
 }
 
-.bar input{
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px 20px;
-    font-size: 20px;
-    color: #cac7ff;
+.bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 16px 12px;
+  font-size: 18px;
+  color: #cac7ff;
+  min-width: 0;
 }
 
 ::placeholder {
-    color: #cac7ff;
+  color: #cac7ff;
 }
 
 .bar button img {
-    width: 25px;
+  width: 25px;
 }
 
-.bar button{
-    border: 0;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    background: #58629b;    
+.bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #58629b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  textarea {
+    width: 90vw;
+    height: 35vh;
+    font-size: 16px;
+  }
+
+  .bar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .bar input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .bar button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .inputbar {
+    margin: 10px;
+  }
 }
