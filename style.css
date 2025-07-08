@@ -1,0 +1,68 @@
+/* Make the body a flex container to center its content */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* Horizontal center */
+  align-items: center;      /* Vertical center */
+  background-color: rgb(52, 53, 65); /* Optional: light background */
+  flex-direction: column;
+}
+
+/* Style the textarea */
+textarea {
+  width: 50vw;         /* 80% of viewport width */
+  height: 50vh;        /* 60% of viewport height */
+  font-size: 18px;
+  padding: 0px;
+  border: 2px solid #a19a9a;
+  border-radius: 10px;
+  resize: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Optional: soft shadow */
+  outline: none;
+  background-color: rgb(52, 53, 65);
+  color: white;
+}
+
+.inputbar{
+    margin: 20px;
+}
+
+.bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border: 60px;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 60px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+::placeholder {
+    color: #cac7ff;
+}
+
+.bar button img {
+    width: 25px;
+}
+
+.bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;    
+}
